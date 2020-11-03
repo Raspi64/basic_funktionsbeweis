@@ -1,3 +1,48 @@
+# --- Fabian README ---
+
+## Installation
+
+### Clone repo
+	$ make clean
+	$ git clone https://github.com/Raspi64/basic_funktionsbeweis
+	$ cd basic_funktionsbeweis
+
+### Compile
+	$ make
+
+### Launch
+	$ ./cbmbasic
+
+-----------------------
+
+## How to Create/Use a basic script
+
+### Create a script
+	$ touch script.bas
+	$ chmod +x scipt.bas
+
+### Example script code
+	#!/usr/bin/cbmbasic 	(path to the cbmbasic)
+	10 OPEN 1,1,1,"TEST.DAT"
+	20 PRINT#1, 1234
+	30 PRINT#1, "Hello"
+	40 CLOSE 1
+
+	50 OPEN 2,1,0,"TEST.DAT"
+	60 INPUT#2, A
+	70 INPUT#2, I$
+	80 CLOSE 2
+
+	90 PRINT A
+	100 PRINT I$
+	RUN
+
+### How to run the script
+	$ ./script.bas
+
+
+# --- cbmbasic README---
+
 # cbmbasic - Commodore BASIC V2 as a scripting language
 
 "Commodore BASIC" (cbmbasic) is a 100% compatible version of Commodore's version of Microsoft BASIC 6502 as found on the Commodore 64. You can use it in interactive mode or pass a BASIC file as a command line parameter.
