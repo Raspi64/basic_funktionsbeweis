@@ -249,7 +249,7 @@ MEMTOP() {
 	 * if we want to turn on the plugin
 	 * automatically at start, we can do it here.
 	 */
-	//plugin_on();
+	plugin_on();
 }
 
 /* MEMBOT */
@@ -824,7 +824,7 @@ GETIN() {
             A = _getch();
         else
             A = 0;
-#else
+#else	// Test
         /* From: http://stackoverflow.com/a/1798833/471795 */
         static struct termios oldt, newt;
 

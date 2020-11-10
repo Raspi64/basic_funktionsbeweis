@@ -22,7 +22,10 @@
 	$ chmod +x scipt.bas
 
 ### Example script code
-	#!/usr/bin/cbmbasic 	(path to the cbmbasic)
+The first line has to be the Path to your cbmbasic for example *#!/usr/bin/cbmbasic*
+You can also use cbmbasic as a UNIX scripting language by adding a hashbang line to your BASIC program and making it executable.
+
+	#!/usr/bin/cbmbasic 
 	10 OPEN 1,1,1,"TEST.DAT"
 	20 PRINT#1, 1234
 	30 PRINT#1, "Hello"
@@ -39,6 +42,30 @@
 
 ### How to run the script
 	$ ./script.bas
+
+-----------------------
+
+
+#  Code expansion
+For code expansion you need to edit the plugin.c file.
+In the marked area you first define an instruction name.
+The Last line has to be a continue.
+
+	if (compare("INSTRUCTION")){
+		//code
+		continue;
+	}
+
+To get the parameter you can use these funktion:
+	get_word()
+	get_byte()
+	get_string(char *s)
+	
+	If parameters had to be separate with a comma:	
+	check_comma()
+
+# List of implemented commands
+
 
 
 # --- cbmbasic README---

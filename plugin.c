@@ -238,9 +238,57 @@ plugin_gone() {
 			continue;
 		}
 
-		if (compare("CPARA")){
-			cPara(2);
+		//if (compare("CPARA")){
+		//	cPara(2);
 
+			
+
+		//	continue;
+		//}
+
+		if (compare("CPARAXY")){
+			unsigned char x,y;
+			y = get_byte();
+			check_comma();
+			x = get_byte(); 	
+
+			int a = cParaXY(x, y);
+
+			printf("i: %i",a);
+			continue;
+		}
+
+		if (compare("CMATH")){
+			unsigned short a;
+			unsigned char b;
+
+			a = get_word();
+			
+			printf(a);
+			//check_comma();
+			//b = get_byte();
+			if (a==6502) {
+				printf("MICROSOFT!");
+				continue;
+			} 
+
+
+
+
+			/*unsigned short a, b;
+			unsigned char op;
+			a = get_word();
+			printf(a);
+
+			op = get_byte();
+
+			printf("op: ", op);
+
+			b = get_byte();
+			printf("b: ", b);
+			
+			//cMath(a, op, b);
+		*/
 			
 
 			continue;
@@ -248,9 +296,6 @@ plugin_gone() {
 
 		if (compare("CSTRING")){
 			cString("Welt");
-
-			
-
 			continue;
 		}
 

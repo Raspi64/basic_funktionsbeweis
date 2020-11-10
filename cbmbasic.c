@@ -6458,6 +6458,7 @@ int main(int llvm_cbe_argc, char **llvm_cbe_argv) {
       llvm_cbe_tmp32105_2e_rle__PHI_TEMPORARY = S;
       goto llvm_cbe_lB7F7;
     case 0xE394:
+      printf("Main Basic Entry Point\n"); //sntcap
       goto llvm_cbe_lE394;
     default:
       printf("unknown entry\n");
@@ -6474,6 +6475,7 @@ llvm_cbe_lE394:
   *(&Z) = ((unsigned char )0);
   *(&N) = ((unsigned char )0);
   llvm_cbe_indvar__PHI_TEMPORARY = ((unsigned char )0);   /* for PHI node */
+  printf("Stuff 6478\n");
   goto llvm_cbe_lE455;
 
   do {     /* Syntactic loop 'bb48000' to make GCC happy */
@@ -28375,8 +28377,10 @@ llvm_cbe_lE455:
   *((&RAM[((signed int )(llvm_cbe_tmp4785247853 | 768u))])) = llvm_cbe_tmp47856;
   llvm_cbe_tmp47874 = ((unsigned char )(llvm_cbe_X_2e_tmp_2e_0 + ((unsigned char )-1)));
   if ((((signed char )llvm_cbe_tmp47874) < ((signed char )((unsigned char )0)))) {
+    printf("if\n");
     goto llvm_cbe_bb47890;
   } else {
+    printf("else\n");
     llvm_cbe_indvar__PHI_TEMPORARY = (((unsigned char )(llvm_cbe_indvar + ((unsigned char )1))));   /* for PHI node */
     goto llvm_cbe_lE455;
   }
