@@ -63,6 +63,7 @@ To get the parameter you can use these funktion:
 	get_string(char *s)
 	
 If parameters had to be separate with a comma:	
+
 	check_comma()
 
 -----------------------
