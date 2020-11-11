@@ -57,11 +57,12 @@ The Last line has to be a continue.
 	}
 
 To get the parameter you can use these funktion:
+
 	get_word()
 	get_byte()
 	get_string(char *s)
 	
-	If parameters had to be separate with a comma:	
+If parameters had to be separate with a comma:	
 	check_comma()
 
 -----------------------
