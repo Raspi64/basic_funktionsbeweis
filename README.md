@@ -46,7 +46,7 @@ You can also use cbmbasic as a UNIX scripting language by adding a hashbang line
 -----------------------
 
 
-#  Code expansion
+##  Code expansion
 For code expansion you need to edit the plugin.c file.
 In the marked area you first define an instruction name.
 The Last line has to be a continue.
@@ -64,11 +64,116 @@ To get the parameter you can use these funktion:
 	If parameters had to be separate with a comma:	
 	check_comma()
 
-# List of implemented commands
+-----------------------
+
+## List of implemented commands
+	PRINT
+	PRINT#
+	INPUT
+	INPUT#
+	OPEN
+	LOAD
+	SAVE
+	NEW
+	CONT
+	REM
+	STOP
+	END
+	RUN
+	LIST
+	^
+	*
+	/
+	+
+	-
+	=
+	<
+	>
+	<=
+	>=
+	<>
+	IF
+	THEN
+	REM
+	FOR
+	TO
+	GOTO
+	NEXT
+	TOSQR
+	POS
+	SPC
+	TAB
+	RND
+	(CHR$)
+	(MOD falsches ergebnis)
+	
+-----------------------
+
+## Exercises
+Aufgabe 1: Hello World!
+Schreibe ein kleines Programm das den String “Hello World!” einmal ausgibt.
+
+Musterlösung:
 
 
+	10 PRINT “Hello World!”
+	20 END
+	RUN
+
+
+
+Aufgabe 2: Hello World! To everyone
+Schreib ein kleines Programm das den String “Hello World!” unendlich oft ausgibt.
+
+Musterlösung:
+
+
+	10 PRINT "Hello World!"
+	20 GOTO 10
+	30 END
+	RUN
+
+
+Aufgabe 3: Der Countdown
+Schreibe ein Programm das die Zahlen von 10 bis einschließlich 0 ausgibt.
+
+Musterlösung:
+
+
+	10 FOR I = 0 TO 10 STEP 1
+	20 PRINT 10-I
+	30 NEXT
+	40 END
+	RUN
+
+
+Aufgabe 4: The numbers every programmer must know
+Schreibe ein Programm das die Exponenten von 2^n bis einschließlich 1024 ausgibt.
+
+Musterlösung:
+
+
+	10 FOR I = 0 TO 10 STEP 1
+	20 PRINT 2^I
+	30 NEXT
+	40 END
+	RUN
+
+
+Aufgabe 5: Gauß the brain
+Schreib ein Programm das die Summe von 1 bis n (z.B. 100) errechnet. Die Zahll n soll im Verlauf des Programms variabel eingegeben werden können.
+
+Musterlösung:
+
+
+	10 PRINT "Gib die höchste Zahl ein:"
+	10 INPUT A
+	20 PRINT (A*(A+1))/2
+	30 END
+	RUN
 
 # --- cbmbasic README---
+
 
 # cbmbasic - Commodore BASIC V2 as a scripting language
 
